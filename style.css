@@ -1,0 +1,81 @@
+body {
+  margin: 0; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-column-gap: 30px;
+  grid-template-rows: repeat(3, 271px);
+  justify-content: center; }
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(5, 271px); } }
+.card {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-self: center;
+  border-radius: 12px;
+  width: 200px;
+  height: 271px;
+  transition: transform 1s linear 0s; }
+  .card:hover {
+    transform: scale(1.2);
+    z-index: 2;
+    width: 220px;
+    height: 287px;
+    background-color: #EEEEEE; }
+  .card__foto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 8px; }
+  .card:hover .card__foto {
+    animation-name: border-trans;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .card__number {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #fff;
+    color: #8B0000;
+    border-radius: 16px;
+    position: absolute;
+    top: 100px;
+    right: 10px; }
+  .card:hover .card__number {
+    right: 20px; }
+  .card__name {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+    position: relative; }
+  .card__type-of-sport {
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 19px;
+    display: none;
+    position: relative; }
+  .card:hover .card__type-of-sport {
+    display: inline; }
+
+@keyframes border-trans {
+  form {
+    border-radius: 100px; }
+  to {
+    border-radius: 60px; } }
+
+/*# sourceMappingURL=style.css.map */
